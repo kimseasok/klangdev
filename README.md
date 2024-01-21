@@ -1,4 +1,4 @@
-# DevKlang -- Resume CMS Platform Documentation
+# Resume CMS Platform Documentation
 
 ## Table of Contents
 
@@ -68,10 +68,10 @@
 ## 1. Introduction
 
 ### 1.1 Overview
-The Resume CMS platform is a web-based application designed to help users create and manage their resumes seamlessly. It employs Python Flask for the backend API, Nameko for microservices, Vue.js for the frontend application, PostgreSQL for the database, and Docker for containerization.
+The Resume CMS platform is an online community and web-based application designed to facilitate web developers in sharing their professional profiles, including resumes, portfolios, and ratings. It serves as a collaborative space where developers can connect with one another, exchange knowledge and experiences, and explore freelance opportunities.
 
 ### 1.2 Purpose
-The platform aims to provide an intuitive and feature-rich environment for users to build, update, and share their resumes. It caters to professionals, job seekers, and anyone looking for an efficient way to showcase their skills and experiences.
+The primary purpose of the platform is to create a vibrant and interconnected community for web developers. Beyond traditional resume building, the platform aims to foster collaboration, networking, and skill exchange. Developers can showcase their expertise, share project portfolios, and receive ratings from peers. The platform encourages a culture of continuous learning, where developers can stay updated on industry trends and technologies through interaction with their peers.
 
 ### 1.3 Key Features
 - User-friendly resume builder
@@ -80,6 +80,9 @@ The platform aims to provide an intuitive and feature-rich environment for users
 - Secure user authentication
 - Version-controlled resume editing
 - Seamless deployment using Docker
+- Community features for knowledge exchange
+- Peer ratings and feedback
+- Freelance gig opportunities
 
 ## 2. System Architecture
 
