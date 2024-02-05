@@ -1,219 +1,206 @@
-# Resume CMS Platform Documentation
+# KlangDev - Resume CMS Platform
+
+KlangDev is a web application designed to bring together web developers, allowing them to share professional information, including resumes, portfolios, and connect with others in the web development community.
 
 ## Table of Contents
 
-1. [Introduction](#1-introduction)
-   - 1.1 [Overview](#11-overview)
-   - 1.2 [Purpose](#12-purpose)
-   - 1.3 [Key Features](#13-key-features)
-
-2. [System Architecture](#2-system-architecture)
-   - 2.1 [Backend (Python Flask & Nameko)](#21-backend-python-flask--nameko)
-   - 2.2 [Frontend (Vue.js)](#22-frontend-vuejs)
-   - 2.3 [Database (PostgreSQL)](#23-database-postgresql)
-   - 2.4 [Containerization (Docker)](#24-containerization-docker)
-
-3. [Getting Started](#3-getting-started)
-   - 3.1 [Prerequisites](#31-prerequisites)
-   - 3.2 [Installation](#32-installation)
-   - 3.3 [Configuration](#33-configuration)
-
-4. [Backend API (Flask & Nameko)](#4-backend-api-flask--nameko)
-   - 4.1 [API Endpoints](#41-api-endpoints)
-   - 4.2 [Authentication](#42-authentication)
-   - 4.3 [Microservices (Nameko)](#43-microservices-nameko)
-   - 4.4 [Error Handling](#44-error-handling)
-
-5. [Frontend Application (Vue.js)](#5-frontend-application-vuejs)
-   - 5.1 [Project Structure](#51-project-structure)
-   - 5.2 [Components](#52-components)
-   - 5.3 [State Management](#53-state-management)
-   - 5.4 [Styling](#54-styling)
-
-6. [Database (PostgreSQL)](#6-database-postgresql)
-   - 6.1 [Schema Design](#61-schema-design)
-   - 6.2 [Data Models](#62-data-models)
-   - 6.3 [Relationships](#63-relationships)
-   - 6.4 [Migrations](#64-migrations)
-
-7. [Docker Technology](#7-docker-technology)
-   - 7.1 [Containerization](#71-containerization)
-   - 7.2 [Docker Compose](#72-docker-compose)
-
-8. [Deployment](#8-deployment)
-   - 8.1 [Deployment Strategies](#81-deployment-strategies)
-   - 8.2 [Scaling](#82-scaling)
-   - 8.3 [Monitoring and Logging](#83-monitoring-and-logging)
-
-9. [Testing](#9-testing)
-   - 9.1 [Unit Testing](#91-unit-testing)
-   - 9.2 [Integration Testing](#92-integration-testing)
-   - 9.3 [End-to-End Testing](#93-end-to-end-testing)
-
-10. [Security](#10-security)
-    - 10.1 [Authentication & Authorization](#101-authentication--authorization)
-    - 10.2 [Secure Communications](#102-secure-communications)
-    - 10.3 [Data Protection](#103-data-protection)
-
-11. [Maintenance](#11-maintenance)
-    - 11.1 [Regular Backups](#111-regular-backups)
-    - 11.2 [Version Control](#112-version-control)
-    - 11.3 [Continuous Integration](#113-continuous-integration)
-
-12. [Troubleshooting](#12-troubleshooting)
-    - 12.1 [Common Issues](#121-common-issues)
-    - 12.2 [Debugging Techniques](#122-debugging-techniques)
-    - 12.3 [Community Support](#123-community-support)
+1. [Introduction](#introduction)
+    - [Overview](#overview)
+    - [Purpose of the Project](#purpose-of-the-project)
+2. [Technology Stack](#technology-stack)
+3. [Monetization Strategies](#monetization-strategies)
+    - [Premium Features](#premium-features)
+    - [Freelance Marketplace](#freelance-marketplace)
+    - [Job Board Integration](#job-board-integration)
+    - [Recruitment Services](#recruitment-services)
+    - [Training and Certification](#training-and-certification)
+    - [Advertising](#advertising)
+    - [Affiliate Marketing](#affiliate-marketing)
+    - [Data Analytics and Insights](#data-analytics-and-insights)
+    - [Partnerships and Sponsorships](#partnerships-and-sponsorships)
+    - [Resume Writing Services](#resume-writing-services)
+    - [API Access](#api-access)
+    - [White Label Solutions](#white-label-solutions)
+4. [User Stories and Use Cases](#user-stories-and-use-cases)
+    - [User Stories](#user-stories)
+    - [Use Cases](#use-cases)
+5. [Conclusion](#conclusion)
 
 ## 1. Introduction
 
 ### 1.1 Overview
-The Resume CMS platform is an online community and web-based application designed to facilitate web developers in sharing their professional profiles, including resumes, portfolios, and ratings. It serves as a collaborative space where developers can connect with one another, exchange knowledge and experiences, and explore freelance opportunities.
+KlangDev is a community-driven web platform where web developers can showcase their professional profiles, exchange knowledge, and collaborate on projects.
 
-### 1.2 Purpose
-The primary purpose of the platform is to create a vibrant and interconnected community for web developers. Beyond traditional resume building, the platform aims to foster collaboration, networking, and skill exchange. Developers can showcase their expertise, share project portfolios, and receive ratings from peers. The platform encourages a culture of continuous learning, where developers can stay updated on industry trends and technologies through interaction with their peers.
+### 1.2 Purpose of the Project
+The primary goal of KlangDev is to establish an online community for web developers, enabling them to share resumes, portfolios, and connect for collaboration and knowledge exchange. Additionally, KlangDev aims to provide various monetization strategies to sustain the platform.
 
-### 1.3 Key Features
-- User-friendly resume builder
-- Multiple resume templates
-- Microservices architecture for scalability
-- Secure user authentication
-- Version-controlled resume editing
-- Seamless deployment using Docker
-- Community features for knowledge exchange
-- Peer ratings and feedback
-- Freelance gig opportunities
+## 2. Technology Stack
 
-## 2. System Architecture
+- Backend API: Python Flask
+- Microservice: Nameko
+- Frontend: VueJs
+- Database: PostgreSQL
+- Containerization: Docker
 
-### 2.1 Backend (Python Flask & Nameko)
-The backend is built on Python Flask, serving as the primary API, and Nameko for microservices. Flask handles user authentication, resume creation, and editing, while Nameko manages distributed tasks like template rendering and document conversion.
+## 3. Monetization Strategies
 
-### 2.2 Frontend (Vue.js)
-Vue.js is used for building a dynamic and responsive user interface. It interacts with the Flask API to fetch and update resume data, providing users with an interactive and smooth experience.
+### 3.1 Premium Features
 
-### 2.3 Database (PostgreSQL)
-PostgreSQL is chosen as the relational database to store user data, resume templates, and other relevant information. It ensures data consistency and allows for efficient querying.
+KlangDev offers premium features or subscription plans for users who desire enhanced capabilities, such as additional storage space, advanced analytics, or customization options.
 
-### 2.4 Containerization (Docker)
-Docker containers encapsulate each component, ensuring consistency across different environments. It simplifies deployment, scaling, and maintenance.
+### 3.2 Freelance Marketplace
 
-## 3. Getting Started
+KlangDev integrates a freelance marketplace, allowing developers to find and apply for freelance projects, and recruiters to post projects and hire suitable freelancers.
 
-### 3.1 Prerequisites
-- Python (3.7 or higher)
-- Node.js
-- Vue CLI
-- PostgreSQL
-- Docker
+#### User Stories and Use Cases
 
-### 3.2 Installation
-Clone the repository and follow instructions in the setup guide to install dependencies and set up the development environment.
+- **User Stories:**
+  - Freelancers: Find and apply to freelance projects.
+  - Recruiters: Post projects and hire suitable freelancers.
+- **Use Cases:**
+  - Freelancer browses and applies to projects.
+  - Recruiter posts a project, reviews proposals, and selects a freelancer.
 
-### 3.3 Configuration
-Update configuration files for Flask, Nameko, Vue.js, and PostgreSQL based on your environment. Configuration files are located in the `config` directory.
+### 3.3 Job Board Integration
 
-## 4. Backend API (Flask & Nameko)
+KlangDev partners with job boards or integrates a job posting feature, enabling recruiters to post job opportunities and access developer profiles, while developers can explore job opportunities and apply.
 
-### 4.1 API Endpoints
-Refer to the API documentation for details on available endpoints, request/response formats, and authentication requirements.
+#### User Stories and Use Cases
 
-### 4.2 Authentication
-The platform uses token-based authentication to secure API endpoints. Users must authenticate to create, edit, or delete resumes.
+- **User Stories:**
+  - Recruiters: Post job opportunities and access developer profiles.
+  - Developers: Explore job opportunities and apply.
+- **Use Cases:**
+  - Recruiter posts a job opportunity.
+  - Developer explores and applies to job postings.
 
-### 4.3 Microservices (Nameko)
-Nameko microservices handle tasks such as template rendering and document conversion asynchronously. Refer to the Nameko service documentation for implementation details.
+### 3.4 Recruitment Services
 
-### 4.4 Error Handling
-The API provides detailed error responses for invalid requests. Refer to the error handling documentation for troubleshooting.
+KlangDev offers premium recruitment services, providing assistance for companies looking to hire developers and helping developers get matched with suitable job opportunities.
 
-## 5. Frontend Application (Vue.js)
+#### User Stories and Use Cases
 
-### 5.1 Project Structure
-Understand the Vue.js project structure and how components are organized. Follow best practices for Vue.js development.
+- **User Stories:**
+  - Companies: Receive assistance in finding and recruiting developers.
+  - Developers: Get matched with suitable job opportunities.
+- **Use Cases:**
+  - Company provides job requirements.
+  - Platform suggests suitable candidates.
+  - Company reviews and selects candidates.
 
-### 5.2 Components
-Explore and customize Vue.js components for resume creation, editing, and template rendering. Component documentation provides insights into each component's functionality.
+### 3.5 Training and Certification
 
-### 5.3 State Management
-Vuex is employed for state management. Understand how the application state is managed and updated throughout the user's interactions.
+KlangDev provides online courses, certifications, and training programs related to web development, with a charge for access to premium educational content.
 
-### 5.4 Styling
-Utilize the styling guide for consistent and visually appealing UI. The platform uses a responsive design to ensure optimal user experience on various devices.
+#### User Stories and Use Cases
 
-## 6. Database (PostgreSQL)
+- **User Stories:**
+  - Developers: Access quality training materials and certifications.
+  - Companies: Enroll employees in relevant training programs.
+- **Use Cases:**
+  - User explores and enrolls in training courses.
+  - User completes course and receives certification.
+  - Company enrolls employees in a training program.
 
-### 6.1 Schema Design
-Review the PostgreSQL schema to understand how user data, resumes, and templates are structured.
+### 3.6 Advertising
 
-### 6.2 Data Models
-Detailed documentation on data models, relationships, and constraints is provided for developers working on database-related tasks.
+KlangDev allows relevant advertisers to display targeted ads on the platform in the form of sponsored content, banners, or other advertising formats.
 
-### 6.3 Relationships
-Understand the relationships between different tables in the database schema and how data integrity is maintained.
+### 3.7 Affiliate Marketing
 
-### 6.4 Migrations
-Learn how to manage database migrations using tools like Alembic to apply changes to the database schema.
+KlangDev partners with affiliate programs related to web development tools, resources, or services, earning commissions for every user who makes a purchase through affiliate links.
 
-## 7. Docker Technology
+### 3.8 Data Analytics and Insights
 
-### 7.1 Containerization
-Understand how Docker containers encapsulate each component of the platform. Learn how to build, run, and manage containers for development and production environments.
+KlangDev offers analytics and insights to users based on their profiles and activities, with a charge for recruiters or companies to access this data for informed decision-making.
 
-### 7.2 Docker Compose
-Utilize Docker Compose for managing multi-container applications. The `docker-compose.yml` file is provided for easy setup and configuration.
+### 3.9 Partnerships and Sponsorships
 
-## 8. Deployment
+KlangDev seeks partnerships with industry-related companies or organizations, allowing them to sponsor certain features, events, or sections of the platform.
 
-### 8.1 Deployment Strategies
-Explore deployment strategies for various environments, including development, staging, and production.
+### 3.10 Resume Writing Services
 
-### 8.2 Scaling
-Learn about scaling options using container orchestration tools like Kubernetes for managing the platform in a scalable and efficient manner.
+KlangDev provides professional resume writing services for users who want expert assistance in creating or enhancing their resumes, with a fee for this premium service.
 
-### 8.3 Monitoring and Logging
-Implement monitoring and logging tools to ensure the health and performance of the application in production.
+### 3.11 API Access
 
-## 9. Testing
+KlangDev offers API access to the platform for third-party applications, services, or job boards, charging a licensing fee for API usage.
 
-### 9.1 Unit Testing
-Detailed documentation on writing and running unit tests for both backend and frontend components.
+### 3.12 White Label Solutions
 
-### 9.2 Integration Testing
-Guidelines for integration testing to ensure seamless communication between different components.
+KlangDev considers offering white label solutions for organizations that want to use the platform with their branding, charging a licensing fee or subscription for this service.
 
-### 9.3 End-to-End Testing
-Learn how to perform end-to-end testing to validate the complete functionality of the platform.
+## 4. User Stories and Use Cases
 
-## 10. Security
+### User Stories:
 
-### 10.1 Authentication & Authorization
-Understand the authentication process and how authorization is implemented to ensure secure access to resources.
+1. **As a Developer, I want to create a resume:**
+   - I can enter my personal information.
+   - I can select from multiple resume templates.
+   - I can add details about my education, work experience, and skills.
 
-### 10.2 Secure Communications
-Ensure secure communication between frontend, backend, and microservices using HTTPS.
+2. **As a Developer, I want to connect with other developers:**
+   - I can send connection requests to other developers.
+   - I can accept or reject connection requests.
 
-### 10.3 Data Protection
-Implement measures to protect user data, including encryption and secure storage practices.
+3. **As a Developer, I want to rate and provide feedback on resumes:**
+   - I can rate resumes based on their content and presentation.
+   - I can provide constructive feedback to help others improve.
 
-## 11. Maintenance
+4. **As a Developer, I want to explore freelance opportunities:**
+   - I can view available freelance gigs.
+   - I can submit proposals for gigs that interest me.
 
-### 11.1 Regular Backups
-Set up regular backups for the database to prevent data loss in case of unexpected events.
+5. **As a Recruiter, I want to search for potential candidates:**
+   - I can search for developers based on skills, experience, or location.
+   - I can view detailed developer profiles.
 
-### 11.2 Version Control
-Follow version control best practices using Git to track changes and collaborate effectively.
+6. **As a Recruiter, I want to connect with developers:**
+   - I can send connection requests to developers.
+   - I can accept or reject connection requests.
 
-### 11.3 Continuous Integration
-Implement continuous integration workflows to automate testing and deployment processes.
+7. **As a Recruiter, I want to endorse or recommend a developer's profile:**
+   - I can endorse specific skills on a developer's profile.
+   - I can provide recommendations or testimonials for a developer's work or projects.
 
-## 12. Troubleshooting
+### Use Cases:
 
-### 12.1 Common Issues
-A comprehensive guide to troubleshooting common issues during development and deployment.
+1. **Use Case: Developer Creates a Resume**
+   - **Actor:** Developer
+   - **Flow:**
+     1. Developer logs in.
+     2. Developer navigates to the resume creation section.
+     3. Developer enters personal information.
+     4. Developer selects a resume template.
+     5. Developer adds details about education, work experience, and skills.
+     6. Developer saves the resume.
 
-### 12.2 Debugging Techniques
-Tips and techniques for effective debugging of both backend and frontend code.
+2. **Use Case: Recruiter Searches for Potential Candidates**
+   - **Actor:** Recruiter
+   - **Flow:**
+     1. Recruiter logs in.
+     2. Recruiter uses search functionality to find developers based on specific criteria.
+     3. Recruiter reviews detailed developer profiles.
 
-### 12.3 Community Support
-Connect with the community for assistance, feedback, and discussions related to the platform.
+3. **Use Case: Recruiter Connects with Developers**
+   - **Actor:** Recruiter
+   - **Flow:**
+     1. Recruiter finds a developer profile and sends a connection request.
+     2. Developer receives and accepts the connection request.
+
+4. **Use Case: Recruiter Endorses a Developer's Profile**
+   - **Actor:** Recruiter
+   - **Flow:**
+     1. Recruiter visits a developer's profile.
+     2. Recruiter endorses specific skills on the developer's profile.
+     3. Recruiter provides recommendations or testimonials for the developer's work or projects.
+
+These user stories and use cases differentiate the experiences of Developers and Recruiters within the platform, accommodating their specific needs and interactions.
+
+## 5. Conclusion
+
+KlangDev aims to provide a valuable resource for web developers while offering various monetization strategies to sustain and grow the platform. The combination of premium features, educational content, and marketplace services creates a versatile and sustainable business model.
+
+---
+
+*Note: Adjust the details and implementation of user stories and use cases based on market research and user feedback.*
